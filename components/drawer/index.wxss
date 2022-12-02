@@ -1,0 +1,44 @@
+/* components/drawer/index.wxss */
+.drawer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+}
+/* .drawer-mask{
+  flex: 1;
+} */
+.drawer-popup{
+  position: fixed;
+  bottom: 0%;
+  left: 0;
+  background: skyblue;
+  padding: 50rpx;
+  box-sizing: border-box;
+  width: 100%;
+  height: 500rpx;
+  z-index: 5001;
+}
+.drawer-close-btn{
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+}
+
+/* popup滑入动画 */
+@keyframes slidein{
+  from{
+    transform: translate(0,100%);
+  }
+  to{
+    transform: translate(0,0);
+  }
+}
+/* 划入动画的类 */
+.slidein{
+  animation-duration: 0.5s;
+  animation-name: slidein;
+}

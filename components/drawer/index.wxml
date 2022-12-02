@@ -1,0 +1,12 @@
+<root-portal wx:if="{{show}}">
+    <view class="drawer" bindtap="close">
+    </view>
+    <view class="drawer-popup slidein" style="height: {{height}};">
+      popup
+      <slot name="popup"></slot>
+      <view class="drawer-close-btn">
+        <icon size="60rpx" color="black" bindtap="close" type="cancel"></icon>
+      </view>
+    </view>
+
+</root-portal>
