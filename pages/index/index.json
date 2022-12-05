@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "drawer":"/components/drawer/index",
+    "popup":"/components/popup/index"
+  }
 }

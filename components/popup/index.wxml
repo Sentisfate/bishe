@@ -1,0 +1,16 @@
+<!--components/popup/index.wxml-->
+<page-container position="center" round="true" close-on-slideDown="true" show="{{showPopup}}" custom-style="width:70%;height:40%;position:fixed;left:50%;top:50%;transform:translate(-50%,-60%);border-radius:8px;"
+
+>
+<view class="popup-title horizontal-center">
+  popup-title
+</view>
+<view class="popup-content horizontal-center">
+  content
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, itaque repudiandae! Aperiam ducimus nesciunt, nemo necessitatibus magni suscipit voluptates tenetur ea, dolorum deserunt, exercitationem architecto voluptate illo aliquid. Doloremque, earum.
+</view>
+ <view class="btn-container">
+ <button class="btn" size="mini" type="warn" bindtap="close">关闭弹窗</button> 
+ <button class="btn" size="mini" type="primary" bindtap="toList">公告列表</button>
+ </view>
+</page-container>

@@ -1,4 +1,5 @@
 // components/drawer/index.js
+//close 自定义事件  关闭抽屉
 Component({
   options:{
     multipleSlots:true
@@ -37,6 +38,7 @@ Component({
         msg:'点击了mask遮盖层，关闭drawer',
       }
       this.triggerEvent('close',detail)
+      console.log('close...')
     }
   }
 })

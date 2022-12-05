@@ -1,0 +1,29 @@
+/* components/popup/index.wxss */
+.popup-title,.popup-content{
+  width: 80%;
+  box-sizing: border-box;
+}
+.popup-title{
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup-content{
+  height: 55%;
+  overflow: scroll;
+  padding-bottom: 5%;
+}
+.btn-container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 20%;
+  box-sizing: border-box;
+  align-items: center;
+}
+.horizontal-center{
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
