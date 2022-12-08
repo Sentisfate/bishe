@@ -1,39 +1,35 @@
-<wxs src="/constants/map.wxs" module="map"/>
+<wxs src="/constants/map.wxs" module="map" />
 <view class="container">
-<map id="map" longitude="{{location.lon}}" latitude="{{location.lat}}" subkey="{{map.subkey}}" setting="{{setting}}">
-  <cover-view class="control position-btn" bindtap="getLocation">
-    <cover-image src="/images/gps.png"></cover-image>
-  </cover-view>
-  <cover-view class="control box" style="top:{{showNotice?'40px':'10px'}}">
-    <cover-view data-target="showPopup" bindtap="show">
-      <cover-image src="/images/notification.png"></cover-image>
-      公告
+  <map id="map" longitude="{{location.lon}}" latitude="{{location.lat}}" subkey="{{map.subkey}}" setting="{{setting}}" bindmarkertap="tapMapMarker" markers="{{allMarkers}}">
+    <cover-view class="control position-btn" bindtap="getLocation">
+      <cover-image src="/images/gps.png"></cover-image>
     </cover-view>
-    <cover-view data-target="show" bindtap="show">
-      <cover-image src="/images/layers.png"></cover-image>
-      图层
-    </cover-view>
-  </cover-view>
-  <!-- 顶部通知栏 -->
-  <cover-view wx:if="{{showNotice}}" class="control message">
-    <cover-image src="/images/notice.png"></cover-image>
-    <cover-view class="text-box">
-      <cover-view class="text">
-        请广大市民按照有关规定，做到核酸应检尽检
+    <cover-view class="control box" style="top:{{showTopNotice?'40px':'10px'}}">
+      <cover-view bindtap="showPopup">
+        <cover-image src="/images/notification.png"></cover-image>
+        <cover-view>公告</cover-view>
+      </cover-view>
+      <cover-view bindtap="showLayersControl">
+        <cover-image src="/images/layers.png"></cover-image>
+        <cover-view>图层</cover-view>
       </cover-view>
     </cover-view>
-    <cover-image data-target="showNotice" bindtap="close" src="/images/close.png"></cover-image>
-  </cover-view>
-</map>
-  <drawer data-target="show" show="{{show}}" bindclose="close">
-      <view slot="hhh">
-        info
-      </view>
-      <view slot="popup">
-        layercontrol
-      </view>
+    <!-- 顶部通知栏 -->
+    <cover-view wx:if="{{showTopNotice}}" class="control message">
+      <cover-image src="/images/notice.png"></cover-image>
+      <cover-view class="text-box">
+        <cover-view class="text">
+          请广大市民按照有关规定，做到核酸应检尽检
+        </cover-view>
+      </cover-view>
+      <cover-image bindtap="closeNotice" src="/images/close.png"></cover-image>
+    </cover-view>
+  </map>
+  <drawer data-target="show" show="{{showDrawer}}" bindclose="closeDrawer" showInfo="{{showInfo}}">
+    <view slot="popup">
+      <info show="{{showInfo}}" data-location="{{markerLocation}}" title="{{drawerTitle}}" info="{{info}}" bindnavigate="navigate"></info>
+      <layers show="{{!showInfo}}" />
+    </view>
   </drawer>
 </view>
-<popup show="{{showPopup}}"/>
-
-  
+<popup show="{{showPopup}}" />

@@ -1,0 +1,14 @@
+<view hidden="{{!show}}">
+  <view class="title">
+    {{title}}
+  </view>
+  <view class="content-box">
+    <view wx:for="{{info}}" wx:key="index" class="row">
+      <view class="row-key">{{item.key}}:</view>
+      <view class="row-value">{{item.value}}</view>
+    </view>
+  </view>
+  <view>
+    <button hidden="{{!showInfo}}" bindtap="navigate" class="navigation-btn" size="mini" type="default">导航</button>
+  </view>
+</view>

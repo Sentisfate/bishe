@@ -38,7 +38,6 @@ Component({
         msg:'点击了mask遮盖层，关闭drawer',
       }
       this.triggerEvent('close',detail)
-      console.log('close...')
     }
   }
 })

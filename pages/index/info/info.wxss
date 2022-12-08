@@ -1,0 +1,34 @@
+/* pages/index/info/info.wxss */
+
+/* popup内部插槽样式 */
+/* 导航按钮样式 */
+.navigation-btn {
+  float: right;
+  color: #fff !important;
+  background-color: #5677fc !important;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.content-box {
+  height: 280rpx;
+  padding: 10px 0px 10px;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+.content-box .row {
+  display: flex;
+  align-items: center;
+  padding: 3px 0px;
+}
+
+.row-key {
+  flex: 1;
+}
+
+.row-value {
+  flex: 2;
+}

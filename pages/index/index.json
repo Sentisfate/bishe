@@ -1,6 +1,9 @@
 {
   "usingComponents": {
     "drawer":"/components/drawer/index",
-    "popup":"/components/popup/index"
+    "popup":"/components/popup/index",
+    "gird":"/components/grid/index",
+    "info":"./info/info",
+    "layers":"./layers/layers"
   }
 }
